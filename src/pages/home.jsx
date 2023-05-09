@@ -1,9 +1,7 @@
 import Spline from '@splinetool/react-spline';
 
 export const Home = () => {
-
-
-
+    
     return (
         <section className='canvas-wrapper'>
             <Spline scene="https://prod.spline.design/LJZ1gNK-OfLHoCpa/scene.splinecode" />
