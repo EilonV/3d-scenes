@@ -1,0 +1,131 @@
+canvas {
+    height: 100vh !important;
+    opacity: 0;
+    transform: scale(0.1);
+    animation: load-canvas 1s 3.5s forwards;
+
+    @keyframes load-canvas {
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+.canvas-wrapper {
+    background-color: rgba(255, 196, 0, 0.288);
+    animation: loadBG 1s 3.5s forwards;
+
+    @keyframes loadBG {
+        to {
+            background: none;
+        }
+    }
+}
+
+.scene {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: 0.5s;
+    width: 200px;
+    height: 200px;
+    // border: 1px solid #CCC;
+    perspective: 400px;
+    border: 10px rgb(207, 115, 231) solid;
+    padding: 15px;
+    animation: load 1s 3.5s forwards;
+
+}
+
+@keyframes load {
+    to {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.1);
+        pointer-events: none
+    }
+}
+
+.cube {
+    transition: 5.5s;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    // transform: translateZ(-100px);
+    // transition: transform 0.5s;
+    animation: rotate 5s infinite linear;
+
+    @keyframes rotate {
+        to {
+            transform: rotate3d(1, 1, -2, 360deg);
+        }
+    }
+}
+
+.cube__face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid white;
+    line-height: 200px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.cube__face--front,
+.cube__face--right,
+.cube__face--back,
+.cube__face--left,
+.cube__face--top,
+.cube__face--bottom {
+    // background: hsla(0, 50%, 50%, 1);
+    background: rgb(207, 115, 231);
+}
+
+// .cube__face--right {
+//     background: hsla(60, 50%, 50%, 1);
+// }
+
+// .cube__face--back {
+//     background: hsla(120, 50%, 50%, 1);
+// }
+
+// .cube__face--left {
+//     background: hsla(180, 50%, 50%, 1);
+// }
+
+// .cube__face--top {
+//     background: hsla(240, 50%, 50%, 1);
+// }
+
+// .cube__face--bottom {
+//     background: hsla(300, 100%, 50%, 1);
+// }
+
+.cube__face--front {
+    transform: rotateY(0deg) translateZ(100px);
+}
+
+.cube__face--right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.cube__face--back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.cube__face--left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.cube__face--top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.cube__face--bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
