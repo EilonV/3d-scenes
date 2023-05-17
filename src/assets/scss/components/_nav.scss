@@ -1,0 +1,28 @@
+nav {
+    background-color: $black;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 15px;
+    border-radius: 50px;
+    pointer-events: none;
+    transition: 0.5s;
+
+    a {
+        pointer-events: all;
+        font-size: 18px;
+        color: $white;
+        padding: 20px 5px;
+        border-radius: 33px;
+        text-align: center;
+
+        &.active {
+            background: $purple;
+        }
+    }
+}

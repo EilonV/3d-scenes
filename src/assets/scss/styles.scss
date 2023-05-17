@@ -1,6 +1,14 @@
-
 // BASICS
-@import 'basics/base';
+@import 'basics/_base';
+
+// SETUP
+@import 'setup/_variables.scss';
+@import 'setup/_fonts.scss';
+
 
 // PAGES
 @import 'views/_home.scss';
+@import 'views/_rocket.scss';
+
+// COMPONENTS
+@import 'components/_nav.scss';
