@@ -12,7 +12,7 @@ nav {
     border-radius: 50px;
     pointer-events: none;
     transition: 0.5s;
-
+    user-select: none;
     a {
         pointer-events: all;
         font-size: 18px;
