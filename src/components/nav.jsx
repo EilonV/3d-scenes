@@ -22,7 +22,7 @@ export const Nav = () => {
             default:
                 break;
         }
-    }, [])
+    }, [location.pathname])
 
     const activateLink = (e) => {
         let el = e.target
